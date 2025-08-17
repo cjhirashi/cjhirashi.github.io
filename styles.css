@@ -3,6 +3,8 @@
   --surface: #0f172a;
   --surface-2: #111827;
   --text: #e5e7eb;
+  --text-link: rgba(56,189,248,.6);
+  --text-link-hover: rgba(56,189,248,.85);
   --muted: #9ca3af;
   --primary: #0ea5e9;
   --primary-2: #38bdf8;
@@ -36,6 +38,15 @@ header {
   backdrop-filter: blur(12px);
   background: linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.6));
   border-bottom: 1px solid rgba(148,163,184,.12);
+}
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+a:hover, a:focus {
+  color: var(--text-link-hover);
+  outline: none;
 }
 .nav { display:flex; align-items:center; justify-content:space-between; padding: .8rem 0; }
 .brand { display:flex; align-items:center; gap:.75rem; text-decoration:none; color:var(--text); }
