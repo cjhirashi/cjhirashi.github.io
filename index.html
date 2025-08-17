@@ -83,105 +83,8 @@
         </aside>
       </div>
     </section>
-
-    <!-- HABILIDADES -->
-    <section id="habilidades" aria-labelledby="skills-title">
-      <h2 class="section-title">🧠 Habilidades</h2>
-      <div class="grid-3">
-        <div class="meta-card">
-          <div class="small">Lenguajes</div>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">TypeScript</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-          </div>
-        </div>
-        <div class="meta-card">
-          <div class="small">Librerías y Frameworks</div>
-          <div class="chips">
-            <span class="chip">pandas</span>
-            <span class="chip">NumPy</span>
-            <span class="chip">Matplotlib</span>
-            <span class="chip">scikit-learn</span>
-            <span class="chip">Seaborn</span>
-            <span class="chip">Plotly</span>
-          </div>
-        </div>
-        <div class="meta-card">
-          <div class="small">Bases de datos y herramientas</div>
-          <div class="chips">
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Jupyter</span>
-            <span class="chip">VS Code</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" aria-labelledby="projects-title">
-      <h2 class="section-title">🧩 Proyectos</h2>
-      <div class="cards">
-        <!-- Proyecto 1 -->
-        <article class="card">
-          <div class="thumb" role="img" aria-label="Visualización de datos"></div>
-          <div class="card-body">
-            <h3>Análisis de Tarifas de Prepago (Megaline) -Sprint 5</h3>
-            <p class="muted">Proyecto del Sprint 5 en TripleTen que analiza datos de clientes de Megaline para identificar qué tarifa, Surf o Ultimate, genera más ingresos y apoyar decisiones de marketing. Se usan datos de 500 clientes en 2018 con información de llamadas, SMS, internet y plan contratado.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">pandas</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">Jupyter</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn" href="https://github.com/cjhirashi/proyecto-sprint-5" target="_blank" rel="noopener">Código</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 2 -->
-        <article class="card">
-          <div class="thumb" role="img" aria-label="Asistente GPT"></div>
-          <div class="card-body">
-            <h3>Análisis de Ventas de Videojuegos - Sprint 6</h3>
-            <p class="muted">Análisis de ventas de videojuegos a nivel global (Sprint 6 - TripleTen). Estudio de patrones de éxito en plataformas, géneros y regiones, con pruebas de hipótesis estadísticas para apoyar decisiones estratégicas de mercado.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">pandas</span>
-              <span class="tag">Jupyter</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn" href="https://github.com/cjhirashi/proyecto-sprint-6" target="_blank" rel="noopener">Código</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 3 -->
-        <article class="card">
-          <div class="thumb" role="img" aria-label="Análisis de datos"></div>
-          <div class="card-body">
-            <h3>Streamlit Dashboard - Anuncios de Vehículos Usados</h3>
-            <p class="muted">Aplicación web interactiva en Streamlit para analizar anuncios de autos usados en EE.UU. Permite explorar la relación entre kilometraje (odometer) y precio (price), con una interfaz clara y visualmente atractiva para el análisis de mercado.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">pandas</span>
-              <span class="tag">Matplotlib</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn" href="https://github.com/cjhirashi/dashboard-sprint-7" target="_blank" rel="noopener">Código</a>
-              <a class="btn alt" href="https://dashboard-sprint-7.onrender.com" aria-disabled="true">Demo</a>
-            </div>
-          </div>
-        </article>
-      </div>
-      <p class="small muted" style="margin-top:.6rem">Tip: puedes reemplazar las imágenes de portada (Unsplash) con capturas de tus notebooks o dashboards.</p>
-    </section>
+    <div data-include="habilidades.html"></div>
+    <div data-include="proyectos.html"></div>
 
     <!-- EXPERIENCIA -->
     <section id="experiencia" aria-labelledby="exp-title">
@@ -226,25 +129,7 @@
         </div>
       </div>
     </section>
-
-    <!-- EDUCACIÓN -->
-    <section id="educacion" aria-labelledby="edu-title">
-      <h2 class="section-title">🎓 Educación</h2>
-      <div class="grid-2">
-        <div class="meta-card">
-          <b>TripleTen</b>
-          <div class="small">Bootcamp en Ciencia de Datos — 2025 (En curso)</div>
-        </div>
-        <div class="meta-card">
-          <b>Formación complementaria</b>
-          <div class="small">Udemy: Python, Machine Learning, JavaScript/TypeScript, HTML/CSS</div>
-        </div>
-        <div class="meta-card">
-          <b>Universidad Tecnológia Tula Tepeji</b>
-          <div class="small">Electrónica y Automatización</div>
-        </div>
-      </div>
-    </section>
+    <div data-include="educacion.html"></div>
 
     <!-- CONTACTO -->
     <section id="contacto" aria-labelledby="contact-title">
@@ -281,6 +166,12 @@
       if (e.key === 'Escape') {
         document.querySelector('.menu')?.classList.remove('show');
       }
+    });
+    // carga de secciones externas
+    document.querySelectorAll('[data-include]').forEach(el => {
+      fetch(el.getAttribute('data-include'))
+        .then(res => res.text())
+        .then(html => { el.outerHTML = html; });
     });
   </script>
 </body>
