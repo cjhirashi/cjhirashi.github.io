@@ -1,22 +1,39 @@
-# cjhirashi.github.io
+# 🌐 Portafolio Profesional - [cjhirashi.github.io](https://cjhirashi.github.io)
 
-Portafolio profesional de Carlos Jiménez Hirashi.
+[![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![Status](https://img.shields.io/badge/Estado-Activo-brightgreen?style=flat)](https://cjhirashi.github.io)
 
-Sitio estático construido con **HTML**, **CSS** y **JavaScript**. Las secciones de habilidades, proyectos, experiencia y educación se cargan dinámicamente desde archivos JSON.
+---
 
-## Archivos principales
+## 🚀 Descripción
 
-- `index.html`: página principal y estructura del sitio.
-- `main.js`: utilidades y carga dinámica de contenido.
-- `styles.css`: estilos y diseño responsivo.
-- `habilidades.json`: datos de categorías de habilidades.
-- `proyectos.json`: datos de proyectos destacados.
-- `experiencia.json`: historial laboral.
-- `educacion.json`: formación académica.
+Sitio web estático que funciona como portafolio profesional de **Carlos Jiménez Hirashi**.  
+Muestra habilidades, proyectos, experiencia laboral y educación de forma clara y dinámica, con información cargada desde archivos JSON.
 
-## Visualización local
+🔗 **Demo en vivo:** [cjhirashi.github.io](https://cjhirashi.github.io)
 
-No se requieren dependencias ni compilación. Para ver el sitio abre `index.html` en el navegador:
+---
+
+## 🗂️ Archivos principales
+
+| Archivo        | Descripción |
+|----------------|-------------|
+| `index.html`   | Página principal y estructura del sitio |
+| `main.js`      | Utilidades y carga dinámica de contenido |
+| `styles.css`   | Estilos y diseño responsivo |
+| `habilidades.json` | Datos de categorías de habilidades |
+| `proyectos.json`   | Proyectos destacados |
+| `experiencia.json` | Historial laboral |
+| `educacion.json`   | Formación académica |
+
+---
+
+## ⚙️ Visualización local
+
+No requiere dependencias ni compilación.  
+Simplemente abre `index.html` en tu navegador:
 
 ```bash
 # macOS
@@ -24,16 +41,4 @@ open index.html
 
 # Linux
 xdg-open index.html
-```
-
-## Actualizar contenido
-
-Cada sección se alimenta de un archivo JSON:
-
-- **Habilidades** (`habilidades.json`): lista de objetos con `titulo` e `items`.
-- **Proyectos** (`proyectos.json`): cada proyecto incluye `titulo`, `descripcion`, `tags`, `codigo` y opcionalmente `demo` e `image`.
-- **Experiencia** (`experiencia.json`): objetos con `empresa`, `puesto`, `periodo` y un arreglo de `logros`.
-- **Educación** (`educacion.json`): objetos con `institucion` y `detalle`.
-
-Edita los archivos correspondientes y recarga `index.html` para ver los cambios.
 
