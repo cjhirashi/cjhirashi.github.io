@@ -2,7 +2,7 @@
 
 Portafolio profesional de Carlos Jiménez Hirashi.
 
-Este repositorio contiene un sitio web estático construido solo con **HTML** y **CSS**.
+Este repositorio contiene un sitio web estático construido solo con **HTML** y **CSS**, ahora con selector de modo claro/oscuro/sistema.
 
 ## Archivos principales
 
