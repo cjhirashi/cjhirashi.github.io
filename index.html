@@ -88,8 +88,15 @@
         </aside>
       </div>
     </section>
-    <div data-include="habilidades.html"></div>
-    <div data-include="proyectos.html"></div>
+    <!-- HABILIDADES -->
+    <section id="habilidades" aria-labelledby="skills-title">
+      <!-- Contenido cargado dinámicamente desde habilidades.json -->
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" aria-labelledby="projects-title">
+      <!-- Contenido cargado dinámicamente desde proyectos.json -->
+    </section>
 
     <!-- EXPERIENCIA -->
     <section id="experiencia" aria-labelledby="exp-title">
@@ -134,7 +141,10 @@
         </div>
       </div>
     </section>
-    <div data-include="educacion.html"></div>
+    <!-- EDUCACION -->
+    <section id="educacion" aria-labelledby="edu-title">
+      <!-- Contenido cargado dinámicamente desde educacion.json -->
+    </section>
 
     <!-- CONTACTO -->
     <section id="contacto" aria-labelledby="contact-title">
@@ -153,59 +163,6 @@
     </footer>
   </main>
 
-    <script>
-      // año dinámico
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // tema claro/oscuro/sistema
-      const themeSelect = document.getElementById('theme-select');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(mode) {
-        if (mode === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-        } else if (mode === 'dark') {
-          document.documentElement.removeAttribute('data-theme');
-        } else {
-          prefersDark.matches
-            ? document.documentElement.removeAttribute('data-theme')
-            : document.documentElement.setAttribute('data-theme', 'light');
-        }
-      }
-      const savedTheme = localStorage.getItem('theme') || 'system';
-      themeSelect.value = savedTheme;
-      setTheme(savedTheme);
-      themeSelect.addEventListener('change', (e) => {
-        const val = e.target.value;
-        localStorage.setItem('theme', val);
-        setTheme(val);
-      });
-      prefersDark.addEventListener('change', () => {
-        if ((localStorage.getItem('theme') || 'system') === 'system') {
-          setTheme('system');
-        }
-      });
-
-    // cerrar menú al hacer click fuera (móvil)
-    document.addEventListener('click', (e) => {
-      const menu = document.querySelector('.menu');
-      const toggle = document.querySelector('.menu-toggle');
-      if (!menu || !toggle) return;
-      const clickInside = menu.contains(e.target) || toggle.contains(e.target);
-      if (!clickInside) menu.classList.remove('show');
-    });
-
-      // accesibilidad: cerrar con Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelector('.menu')?.classList.remove('show');
-      }
-    });
-    // carga de secciones externas
-    document.querySelectorAll('[data-include]').forEach(el => {
-      fetch(el.getAttribute('data-include'))
-        .then(res => res.text())
-        .then(html => { el.outerHTML = html; });
-    });
-  </script>
+    <script src="main.js"></script>
 </body>
 </html>
