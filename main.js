@@ -12,6 +12,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Tema claro/oscuro/sistema
 const themeSelect = document.getElementById('theme-select');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+/**
+ * Aplica el tema visual solicitado.
+ * @param {string} mode - "light", "dark" o "system".
+ */
 function setTheme(mode) {
   if (mode === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -26,18 +30,20 @@ function setTheme(mode) {
 const savedTheme = localStorage.getItem('theme') || 'system';
 themeSelect.value = savedTheme;
 setTheme(savedTheme);
+// Al cambiar el selector, persistir la preferencia del usuario
 themeSelect.addEventListener('change', (e) => {
   const val = e.target.value;
   localStorage.setItem('theme', val);
   setTheme(val);
 });
+// Ajusta el tema automáticamente cuando cambia la preferencia del sistema
 prefersDark.addEventListener('change', () => {
   if ((localStorage.getItem('theme') || 'system') === 'system') {
     setTheme('system');
   }
 });
 
-// cerrar menú al hacer click fuera (móvil)
+// Cerrar menú móvil al hacer click fuera
 document.addEventListener('click', (e) => {
   const menu = document.querySelector('.menu');
   const toggle = document.querySelector('.menu-toggle');
@@ -60,6 +66,11 @@ document.addEventListener('keydown', (e) => {
    ========================================================= */
 
 // Helper genérico para cargar JSON
+/**
+ * Descarga un archivo JSON y construye una sección con los datos.
+ * @param {string} url - Ruta del archivo JSON.
+ * @param {(data: any) => void} builder - Función que genera el HTML de la sección.
+ */
 function loadJSON(url, builder) {
   fetch(url)
     .then(res => res.json())
@@ -68,6 +79,10 @@ function loadJSON(url, builder) {
 }
 
 // Construye la sección de Habilidades
+/**
+ * Genera tarjetas de habilidades agrupadas por categoría.
+ * @param {{titulo: string, items: string[]}[]} data
+ */
 function buildSkills(data) {
   const section = document.getElementById('habilidades');
   let html = '<h2 class="section-title">🧠 Habilidades</h2><div class="grid-3">';
@@ -79,6 +94,10 @@ function buildSkills(data) {
 }
 
 // Construye la sección de Proyectos
+/**
+ * Crea tarjetas con información de cada proyecto.
+ * @param {{titulo:string, descripcion:string, tags:string[], codigo:string, demo?:string, image?:string, thumb?:string}[]} data
+ */
 function buildProjects(data) {
   const section = document.getElementById('proyectos');
   let html = '<h2 class="section-title">🧩 Proyectos</h2><div class="cards">';
@@ -107,6 +126,10 @@ function buildProjects(data) {
 }
 
 // Construye la sección de Experiencia
+/**
+ * Muestra una línea de tiempo con puestos y logros.
+ * @param {{empresa:string, puesto:string, periodo:string, logros:string[]}[]} data
+ */
 function buildExperience(data) {
   const section = document.getElementById('experiencia');
   let html = '<h2 class="section-title">🧭 Experiencia</h2><div class="timeline">';
@@ -118,6 +141,10 @@ function buildExperience(data) {
 }
 
 // Construye la sección de Educación
+/**
+ * Lista instituciones y detalles de estudios realizados.
+ * @param {{institucion:string, detalle:string}[]} data
+ */
 function buildEducation(data) {
   const section = document.getElementById('educacion');
   let html = '<h2 class="section-title">🎓 Educación</h2><div class="grid-2">';

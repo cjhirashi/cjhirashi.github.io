@@ -1,3 +1,5 @@
+/* Hoja de estilos principal del portafolio */
+/* Variables de tema oscuro por defecto */
 :root {
   --bg: #000;
   --surface: #18181b;
@@ -23,6 +25,7 @@
   --border: rgba(82,82,91,.15);
 }
 
+/* Variables para modo claro cuando el usuario selecciona data-theme="light" */
 :root[data-theme="light"] {
   --bg: #fff;
   --surface: #fff;
@@ -44,6 +47,7 @@
   --border: rgba(82,82,91,.12);
 }
 
+/* Reseteo y tipografía base */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
