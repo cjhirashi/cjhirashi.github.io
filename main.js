@@ -54,9 +54,9 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* =========================================================
-   Carga dinámica de secciones desde archivos JSON
-   Las funciones de construcción generan el HTML necesario
-   para cada sección a partir de los datos proporcionados.
+  Carga dinámica de secciones desde archivos JSON
+  Las funciones de construcción generan el HTML necesario
+  para cada sección a partir de los datos proporcionados.
    ========================================================= */
 
 // Helper genérico para cargar JSON
