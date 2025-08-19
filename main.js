@@ -83,7 +83,24 @@ function buildProjects(data) {
   const section = document.getElementById('proyectos');
   let html = '<h2 class="section-title">🧩 Proyectos</h2><div class="cards">';
   data.forEach(p => {
-    html += `\n        <article class="card">\n          <div class="thumb" role="img" aria-label="${p.thumb}"></div>\n          <div class="card-body">\n            <h3>${p.titulo}</h3>\n            <p class="muted">${p.descripcion}</p>\n            <div class="tags">\n              ${p.tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('')}\n            </div>\n            <div class="card-actions">\n              <a class="btn" href="${p.codigo}" target="_blank" rel="noopener">Código</a>\n              ${p.demo ? `<a class=\"btn alt\" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}\n            </div>\n          </div>\n        </article>`;
+    const thumbStyle = p.imagen
+      ? ` style="background-image: radial-gradient(60% 80% at 40% 20%, rgba(6,182,212,.2), rgba(0,0,0,.6) 60%), url('${p.imagen}');"`
+      : '';
+    html += `
+        <article class="card">
+          <div class="thumb"${thumbStyle} role="img" aria-label="${p.thumb}"></div>
+          <div class="card-body">
+            <h3>${p.titulo}</h3>
+            <p class="muted">${p.descripcion}</p>
+            <div class="tags">
+              ${p.tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('')}
+            </div>
+            <div class="card-actions">
+              <a class="btn" href="${p.codigo}" target="_blank" rel="noopener">Código</a>
+      ${p.demo ? `<a class=\"btn alt\" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}
+            </div>
+          </div>
+        </article>`;
   });
   html += '</div><p class="small muted" style="margin-top:.6rem">Tip: puedes reemplazar las imágenes de portada (Unsplash) con capturas de tus notebooks o dashboards.</p>';
   section.innerHTML = html;
