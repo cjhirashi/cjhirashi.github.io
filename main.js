@@ -83,8 +83,8 @@ function buildProjects(data) {
   const section = document.getElementById('proyectos');
   let html = '<h2 class="section-title">🧩 Proyectos</h2><div class="cards">';
   data.forEach(p => {
-    const thumbStyle = p.imagen
-      ? ` style="background-image: radial-gradient(60% 80% at 40% 20%, rgba(6,182,212,.2), rgba(0,0,0,.6) 60%), url('${p.imagen}');"`
+    const thumbStyle = p.image
+      ? ` style="background-image: radial-gradient(60% 80% at 40% 20%, rgba(6,182,212,.2), rgba(0,0,0,.6) 60%), url('${p.image}');"`
       : '';
     html += `
         <article class="card">
