@@ -100,46 +100,7 @@
 
     <!-- EXPERIENCIA -->
     <section id="experiencia" aria-labelledby="exp-title">
-      <h2 class="section-title">🧭 Experiencia</h2>
-      <div class="timeline">
-        <div class="t-item">
-          <div class="t-title">Atom Controles · Especialista en Control y Automatización HVAC</div>
-          <div class="t-role">2013–2023 | 2024–Actualidad · México y Colombia</div>
-          <ul class="small">
-            <li>Proyecto personal orientado a brindar soluciones integrales en control y automatización de sistemas HVAC.</li>
-            <li>Diseño, programación, integración y puesta en marcha de sistemas adaptados a entornos específicos.</li>
-            <li>Proyectos en México y Colombia, consolidando presencia en ambos países.</li>
-            <li>Asesoría técnica y comercial para optimizar eficiencia energética, confiabilidad y escalabilidad.</li>
-          </ul>
-        </div>
-        <div class="t-item">
-          <div class="t-title">CYVSA Mantenimiento · Gerente de Automatización</div>
-          <div class="t-role">2023–2024 · México</div>
-          <ul class="small">
-            <li>Dirección de equipo multidisciplinario para mantenimiento de sistemas de automatización HVAC en México.</li>
-            <li>Gestión de recursos, planificación de mantenimiento preventivo/correctivo y control de presupuestos.</li>
-          </ul>
-        </div>
-        <div class="t-item">
-          <div class="t-title">ISAI KMC · Ingeniero de Soporte Técnico LATAM</div>
-          <div class="t-role">2009–2012 · Latinoamérica</div>
-          <ul class="small">
-            <li>Soporte técnico especializado para la marca de controles KMC en toda Latinoamérica.</li>
-            <li>Experiencia internacional en países de Sudamérica.</li>
-            <li>Diseño, programación e implementación de soluciones HVAC adaptadas a clientes.</li>
-            <li>Capacitación presencial y remota en distintos países.</li>
-          </ul>
-        </div>
-        <div class="t-item">
-          <div class="t-title">Azteca Control · Ingeniero de Control HVAC</div>
-          <div class="t-role">2006 – 2009 | 2012 – 2013 · México</div>
-          <ul class="small">
-            <li>Diseño, programación e implementación de sistemas HVAC para sectores industrial, hotelero, farmacéutico, retail, residencial y oficinas.</li>
-            <li>Elaboración de planos en AutoCAD y configuración de controladores.</li>
-            <li>Capacitación a clientes y equipos técnicos.</li>
-          </ul>
-        </div>
-      </div>
+      <!-- Contenido cargado dinámicamente desde experiencia.json -->
     </section>
     <!-- EDUCACION -->
     <section id="educacion" aria-labelledby="edu-title">
@@ -233,6 +194,19 @@
           html += `\n          <article class="card">\n            <div class="thumb" role="img" aria-label="${p.thumb}"></div>\n            <div class="card-body">\n              <h3>${p.titulo}</h3>\n              <p class="muted">${p.descripcion}</p>\n              <div class="tags">\n                ${p.tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('')}\n              </div>\n              <div class="card-actions">\n                <a class="btn" href="${p.codigo}" target="_blank" rel="noopener">Código</a>\n                ${p.demo ? `<a class=\"btn alt\" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}\n              </div>\n            </div>\n          </article>`;
         });
         html += '</div><p class="small muted" style="margin-top:.6rem">Tip: puedes reemplazar las imágenes de portada (Unsplash) con capturas de tus notebooks o dashboards.</p>';
+        section.innerHTML = html;
+      });
+
+    // cargar experiencia desde JSON
+    fetch('experiencia.json')
+      .then(res => res.json())
+      .then(data => {
+        const section = document.getElementById('experiencia');
+        let html = '<h2 class="section-title">🧭 Experiencia</h2><div class="timeline">';
+        data.forEach(e => {
+          html += `\n          <div class="t-item">\n            <div class="t-title">${e.empresa} · ${e.puesto}</div>\n            <div class="t-role">${e.periodo}</div>\n            <ul class="small">\n              ${e.logros.map(l => `<li>${l}</li>`).join('')}\n            </ul>\n          </div>`;
+        });
+        html += '</div>';
         section.innerHTML = html;
       });
 
