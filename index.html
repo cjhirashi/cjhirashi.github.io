@@ -88,8 +88,11 @@
         </aside>
       </div>
     </section>
-    <div data-include="habilidades.html"></div>
-    <div data-include="proyectos.html"></div>
+    <!-- HABILIDADES -->
+    <section id="habilidades" aria-labelledby="skills-title"></section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" aria-labelledby="projects-title"></section>
 
     <!-- EXPERIENCIA -->
     <section id="experiencia" aria-labelledby="exp-title">
@@ -134,7 +137,8 @@
         </div>
       </div>
     </section>
-    <div data-include="educacion.html"></div>
+    <!-- EDUCACION -->
+    <section id="educacion" aria-labelledby="edu-title"></section>
 
     <!-- CONTACTO -->
     <section id="contacto" aria-labelledby="contact-title">
@@ -200,12 +204,44 @@
         document.querySelector('.menu')?.classList.remove('show');
       }
     });
-    // carga de secciones externas
-    document.querySelectorAll('[data-include]').forEach(el => {
-      fetch(el.getAttribute('data-include'))
-        .then(res => res.text())
-        .then(html => { el.outerHTML = html; });
-    });
+    // cargar habilidades desde JSON
+    fetch('habilidades.json')
+      .then(res => res.json())
+      .then(data => {
+        const section = document.getElementById('habilidades');
+        let html = '<h2 class="section-title">🧠 Habilidades</h2><div class="grid-3">';
+        data.forEach(cat => {
+          html += `\n          <div class="meta-card">\n            <div class="small">${cat.titulo}</div>\n            <div class="chips">\n              ${cat.items.map(item => `<span class=\"chip\">${item}</span>`).join('')}\n            </div>\n          </div>`;
+        });
+        html += '</div>';
+        section.innerHTML = html;
+      });
+
+    // cargar proyectos desde JSON
+    fetch('proyectos.json')
+      .then(res => res.json())
+      .then(data => {
+        const section = document.getElementById('proyectos');
+        let html = '<h2 class="section-title">🧩 Proyectos</h2><div class="cards">';
+        data.forEach(p => {
+          html += `\n          <article class="card">\n            <div class="thumb" role="img" aria-label="${p.thumb}"></div>\n            <div class="card-body">\n              <h3>${p.titulo}</h3>\n              <p class="muted">${p.descripcion}</p>\n              <div class="tags">\n                ${p.tags.map(tag => `<span class=\"tag\">${tag}</span>`).join('')}\n              </div>\n              <div class="card-actions">\n                <a class="btn" href="${p.codigo}" target="_blank" rel="noopener">Código</a>\n                ${p.demo ? `<a class=\"btn alt\" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}\n              </div>\n            </div>\n          </article>`;
+        });
+        html += '</div><p class="small muted" style="margin-top:.6rem">Tip: puedes reemplazar las imágenes de portada (Unsplash) con capturas de tus notebooks o dashboards.</p>';
+        section.innerHTML = html;
+      });
+
+    // cargar educación desde JSON
+    fetch('educacion.json')
+      .then(res => res.json())
+      .then(data => {
+        const section = document.getElementById('educacion');
+        let html = '<h2 class="section-title">🎓 Educación</h2><div class="grid-2">';
+        data.forEach(e => {
+          html += `\n          <div class="meta-card">\n            <b>${e.institucion}</b>\n            <div class="small">${e.detalle}</div>\n          </div>`;
+        });
+        html += '</div>';
+        section.innerHTML = html;
+      });
   </script>
 </body>
 </html>

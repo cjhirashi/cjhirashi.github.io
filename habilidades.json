@@ -1,0 +1,6 @@
+[
+  {"titulo": "Lenguajes", "items": ["Python", "SQL", "JavaScript", "TypeScript", "HTML", "CSS"]},
+  {"titulo": "Librerías y Frameworks", "items": ["pandas", "NumPy", "Matplotlib", "scikit-learn", "Seaborn", "Plotly"]},
+  {"titulo": "Bases de datos", "items": ["PostgreSQL"]},
+  {"titulo": "Herramientas", "items": ["Git", "GitHub", "Jupyter", "VS Code"]}
+]
