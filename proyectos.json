@@ -1,40 +1,46 @@
 [
     {
-        "thumb": "Visualizaci\u00f3n de datos",
-        "titulo": "An\u00e1lisis de Tarifas de Prepago (Megaline) -Sprint 5",
-        "descripcion": "Proyecto del Sprint 5 en TripleTen que analiza datos de clientes de Megaline para identificar qu\u00e9 tarifa, Surf o Ultimate, genera m\u00e1s ingresos y apoyar decisiones de marketing. Se usan datos de 500 clientes en 2018 con informaci\u00f3n de llamadas, SMS, internet y plan contratado.",
+        "thumb": "Visualización de datos",
+        "titulo": "Análisis de Tarifas de Prepago (Megaline) - Sprint 5",
+        "descripcion": "Proyecto del Sprint 5 en TripleTen que analiza datos de clientes de Megaline para determinar qué tarifa de prepago (Surf o Ultimate) genera mayores ingresos. Incluye exploración de datos de 500 clientes en 2018 con información de llamadas, SMS, tráfico de internet y plan contratado.",
         "tags": [
             "Python",
-            "pandas",
+            "Pandas",
+            "NumPy",
             "Matplotlib",
+            "SciPy",
             "Jupyter"
         ],
         "codigo": "https://github.com/cjhirashi/proyecto-sprint-5",
-        "image": "https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg"
+        "image": "https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80"
     },
     {
         "thumb": "Asistente GPT",
-        "titulo": "An\u00e1lisis de Ventas de Videojuegos - Sprint 6",
-        "descripcion": "An\u00e1lisis de ventas de videojuegos a nivel global (Sprint 6 - TripleTen). Estudio de patrones de \u00e9xito en plataformas, g\u00e9neros y regiones, con pruebas de hip\u00f3tesis estad\u00edsticas para apoyar decisiones estrat\u00e9gicas de mercado.",
+        "titulo": "Análisis de Ventas de Videojuegos - Sprint 6",
+        "descripcion": "Proyecto del Sprint 6 en TripleTen que analiza datos de ventas de videojuegos a nivel global para identificar patrones de éxito en plataformas, géneros y regiones. Incluye pruebas de hipótesis estadísticas y análisis de reseñas para apoyar decisiones estratégicas de mercado.",
         "tags": [
             "Python",
-            "pandas",
+            "Pandas",
+            "Matplotlib",
+            "Seaborn",
             "Jupyter"
         ],
         "codigo": "https://github.com/cjhirashi/proyecto-sprint-6",
-        "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "thumb": "An\u00e1lisis de datos",
-        "titulo": "Streamlit Dashboard - Anuncios de Veh\u00edculos Usados",
-        "descripcion": "Aplicaci\u00f3n web interactiva en Streamlit para analizar anuncios de autos usados en EE.UU. Permite explorar la relaci\u00f3n entre kilometraje (odometer) y precio (price), con una interfaz clara y visualmente atractiva para el an\u00e1lisis de mercado.",
+        "thumb": "Análisis de datos",
+        "titulo": "Streamlit Dashboard - Anuncios de Vehículos Usados - Sprint 7",
+        "descripcion": "Aplicación web interactiva en Streamlit desarrollada en el Sprint 7 de TripleTen. Permite analizar anuncios de autos usados en EE.UU., explorando la relación entre kilometraje (odometer) y precio (price) mediante histogramas y gráficos de dispersión interactivos.",
         "tags": [
             "Python",
-            "pandas",
-            "Matplotlib"
+            "Streamlit",
+            "Plotly",
+            "Jupyter"
         ],
         "codigo": "https://github.com/cjhirashi/dashboard-sprint-7",
         "demo": "https://dashboard-sprint-7.onrender.com",
-        "image": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=80"
+        "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"
     }
+
 ]
