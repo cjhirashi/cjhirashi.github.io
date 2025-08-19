@@ -31,6 +31,11 @@
           <a href="#educacion">Educación</a>
           <a href="#contacto">Contacto</a>
         </div>
+        <div class="theme-toggle" role="group" aria-label="Cambiar tema">
+          <button class="theme-btn" data-theme="light" aria-label="Claro">☀️</button>
+          <button class="theme-btn" data-theme="dark" aria-label="Oscuro">🌙</button>
+          <button class="theme-btn" data-theme="system" aria-label="Sistema">🖥️</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -148,9 +153,46 @@
     </footer>
   </main>
 
-  <script>
-    // año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <script>
+      // año dinámico
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // tema claro/oscuro/sistema
+      const themeBtns = document.querySelectorAll('.theme-btn');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(mode) {
+        if (mode === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else if (mode === 'dark') {
+          document.documentElement.removeAttribute('data-theme');
+        } else {
+          prefersDark.matches
+            ? document.documentElement.removeAttribute('data-theme')
+            : document.documentElement.setAttribute('data-theme', 'light');
+        }
+      }
+      function setActive(mode) {
+        themeBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.theme === mode);
+        });
+      }
+      const savedTheme = localStorage.getItem('theme') || 'system';
+      setTheme(savedTheme);
+      setActive(savedTheme);
+      themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.dataset.theme;
+          localStorage.setItem('theme', val);
+          setTheme(val);
+          setActive(val);
+        });
+      });
+      prefersDark.addEventListener('change', () => {
+        if ((localStorage.getItem('theme') || 'system') === 'system') {
+          setTheme('system');
+          setActive('system');
+        }
+      });
 
     // cerrar menú al hacer click fuera (móvil)
     document.addEventListener('click', (e) => {
@@ -161,7 +203,7 @@
       if (!clickInside) menu.classList.remove('show');
     });
 
-    // accesibilidad: cerrar con Escape
+      // accesibilidad: cerrar con Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelector('.menu')?.classList.remove('show');
