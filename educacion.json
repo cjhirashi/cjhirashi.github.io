@@ -1,5 +1,15 @@
 [
-  {"institucion": "TripleTen", "detalle": "Bootcamp en Ciencia de Datos — 2025 (En curso)"},
-  {"institucion": "Formación complementaria", "detalle": "Udemy: Python, Machine Learning, JavaScript/TypeScript, HTML/CSS"},
-  {"institucion": "Universidad Tecnológica Tula Tepeji", "detalle": "Electrónica y Automatización"}
+    {
+        "institucion": "TripleTen",
+        "detalle": "Bootcamp en Ciencia de Datos \u2014 2025 (En curso)"
+    },
+    {
+        "institucion": "Formaci\u00f3n complementaria",
+        "detalle": "Udemy: Python, Machine Learning, JavaScript/TypeScript, HTML/CSS"
+    },
+    {
+        "institucion": "Universidad Tecnol\u00f3gica Tula Tepeji",
+        "detalle": "Electr\u00f3nica y Automatizaci\u00f3n"
+    }
+
 ]
