@@ -89,6 +89,17 @@ function buildProjects(data) {
   section.innerHTML = html;
 }
 
+// Construye la sección de Experiencia
+function buildExperience(data) {
+  const section = document.getElementById('experiencia');
+  let html = '<h2 class="section-title">🧭 Experiencia</h2><div class="timeline">';
+  data.forEach(e => {
+    html += `\n        <div class="t-item">\n          <div class="t-title">${e.empresa} · ${e.puesto}</div>\n          <div class="t-role">${e.periodo}</div>\n          <ul class="small">\n            ${e.logros.map(l => `<li>${l}</li>`).join('')}\n          </ul>\n        </div>`;
+  });
+  html += '</div>';
+  section.innerHTML = html;
+}
+
 // Construye la sección de Educación
 function buildEducation(data) {
   const section = document.getElementById('educacion');
@@ -103,4 +114,5 @@ function buildEducation(data) {
 // Cargar datos y construir secciones
 loadJSON('habilidades.json', buildSkills);
 loadJSON('proyectos.json', buildProjects);
+loadJSON('experiencia.json', buildExperience);
 loadJSON('educacion.json', buildEducation);
