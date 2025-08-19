@@ -31,6 +31,11 @@
           <a href="#educacion">Educación</a>
           <a href="#contacto">Contacto</a>
         </div>
+        <select id="theme-select" aria-label="Cambiar tema">
+          <option value="system">Sistema</option>
+          <option value="light">Claro</option>
+          <option value="dark">Oscuro</option>
+        </select>
       </nav>
     </div>
   </header>
@@ -148,9 +153,37 @@
     </footer>
   </main>
 
-  <script>
-    // año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <script>
+      // año dinámico
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // tema claro/oscuro/sistema
+      const themeSelect = document.getElementById('theme-select');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(mode) {
+        if (mode === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else if (mode === 'dark') {
+          document.documentElement.removeAttribute('data-theme');
+        } else {
+          prefersDark.matches
+            ? document.documentElement.removeAttribute('data-theme')
+            : document.documentElement.setAttribute('data-theme', 'light');
+        }
+      }
+      const savedTheme = localStorage.getItem('theme') || 'system';
+      themeSelect.value = savedTheme;
+      setTheme(savedTheme);
+      themeSelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        localStorage.setItem('theme', val);
+        setTheme(val);
+      });
+      prefersDark.addEventListener('change', () => {
+        if ((localStorage.getItem('theme') || 'system') === 'system') {
+          setTheme('system');
+        }
+      });
 
     // cerrar menú al hacer click fuera (móvil)
     document.addEventListener('click', (e) => {
@@ -161,7 +194,7 @@
       if (!clickInside) menu.classList.remove('show');
     });
 
-    // accesibilidad: cerrar con Escape
+      // accesibilidad: cerrar con Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelector('.menu')?.classList.remove('show');
