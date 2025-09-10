@@ -41,4 +41,21 @@ open index.html
 
 # Linux
 xdg-open index.html
+ 
+# Windows
+start index.html
+```
 
+---
+
+## 📝 Carga de contenido
+
+El sitio carga cada sección desde archivos JSON ubicados en la raíz del proyecto.\
+Para actualizar la información, edita estos archivos siguiendo su estructura:
+
+- **habilidades.json** – Agrupa las habilidades por categoría usando `titulo` e `items`.
+- **proyectos.json** – Lista proyectos con `thumb`, `titulo`, `descripcion`, array `tags` y enlaces `codigo`; opcionalmente `demo` e `image`.
+- **experiencia.json** – Describe la trayectoria laboral mediante `empresa`, `puesto`, `periodo` y un array de `logros`.
+- **educacion.json** – Detalla los estudios con `institucion` y `detalle`.
+
+Guarda los cambios y vuelve a abrir `index.html` para verlos reflejados.
