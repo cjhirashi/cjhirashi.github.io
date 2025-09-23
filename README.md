@@ -228,7 +228,7 @@ El portafolio incluye los siguientes iconos SVG:
 
 **Tecnología**: `code`, `database`, `layout`, `palette`, `git-branch`, `github`
 **Datos**: `bar-chart`, `pie-chart`, `line-chart`, `calculator`, `trending-up`, `brain`
-**Comunicación**: `mail`, `linkedin`, `map-pin`, `external-link`
+**Comunicación**: `mail`, `linkedin`, `whatsapp`, `map-pin`, `external-link`
 **HVAC**: `wifi`, `network`, `radio`, `settings`, `edit`
 **Generales**: `sun`, `moon`, `monitor`, `award`, `book-open`
 
