@@ -47,27 +47,57 @@ portafolio/
 
 ## 🚀 Instalación y Uso
 
-### **Opción 1: Uso Local**
-1. **Descarga los archivos** y colócalos en una carpeta
-2. **Crea la carpeta `data/`** y guarda todos los archivos JSON
-3. **Abre `index.html`** en tu navegador
+### **✅ Portafolio Ya Desplegado**
 
-### **Opción 2: Servidor Local**
+El portafolio de Carlos Jiménez Hirashi está **activo y funcionando** en:
+🌐 **[cjhirashi.github.io](https://cjhirashi.github.io)**
+
+### **🔄 Para Actualizar el Contenido**
+
+Como el sitio ya está desplegado con GitHub Pages, cualquier cambio que hagas se reflejará automáticamente:
+
+1. **Clona el repositorio localmente**:
+```bash
+git clone https://github.com/cjhirashi/cjhirashi.github.io.git
+cd cjhirashi.github.io
+```
+
+2. **Edita los archivos JSON** que necesites actualizar:
+   - `data/profile.json` - Información personal
+   - `data/projects.json` - Agregar/editar proyectos
+   - `data/tech-stack.json` - Tecnologías
+   - `data/contact.json` - Información de contacto
+
+3. **Sube los cambios**:
+```bash
+git add .
+git commit -m "Update: [descripción del cambio]"
+git push origin main
+```
+
+4. **¡Automático!** Los cambios aparecerán en el sitio en **1-2 minutos**.
+
+### **🖥️ Desarrollo Local (Opcional)**
+
+Si quieres previsualizar cambios antes de subirlos:
+
 ```bash
 # Con Python 3
 python -m http.server 8000
 
-# Con Node.js (npx)
+# Con Node.js
 npx serve .
 
-# Con PHP
-php -S localhost:8000
+# Luego abre: http://localhost:8000
 ```
 
-### **Opción 3: GitHub Pages**
-1. **Sube los archivos** a un repositorio de GitHub
-2. **Activa GitHub Pages** en la configuración del repositorio
-3. **Tu portafolio estará disponible** en `https://tuusuario.github.io/tu-repositorio`
+### **📱 Verificar Funcionalidad**
+
+El sitio incluye:
+- ✅ **Temas responsive** (claro/oscuro/sistema)
+- ✅ **Navegación suave** entre secciones
+- ✅ **Enlaces a GitHub** y redes sociales funcionando
+- ✅ **Diseño mobile-first** optimizado
 
 ## 📝 Configuración
 
@@ -222,19 +252,70 @@ const icons = {
 
 ## 🌐 Deployment
 
-### **GitHub Pages**
-1. **Sube el código** a un repositorio público de GitHub
-2. **Ve a Settings** → **Pages**
-3. **Selecciona la rama** `main` como fuente
-4. **Tu sitio estará disponible** en `https://tuusuario.github.io/tu-repositorio`
+### **✅ Estado Actual - ACTIVO**
 
-### **Netlify**
-1. **Arrastra la carpeta** del proyecto a [Netlify Drop](https://app.netlify.com/drop)
-2. **O conecta tu repositorio** de GitHub para deploys automáticos
+El portafolio está **desplegado y funcionando** en GitHub Pages:
 
-### **Vercel**
-1. **Conecta tu repositorio** en [Vercel](https://vercel.com)
-2. **Deploy automático** con cada push a main
+- 🌐 **URL del sitio**: [cjhirashi.github.io](https://cjhirashi.github.io)
+- 📁 **Repositorio**: [github.com/cjhirashi/cjhirashi.github.io](https://github.com/cjhirashi/cjhirashi.github.io)
+- ⚡ **Estado**: Activo con GitHub Pages
+- 🔄 **Auto-deploy**: Habilitado en rama `main`
+
+### **🔧 Configuración GitHub Pages Actual**
+
+- ✅ **Source**: Deploy from branch `main`
+- ✅ **Folder**: `/ (root)`
+- ✅ **Custom domain**: No configurado (usando subdomain de GitHub)
+- ✅ **HTTPS**: Habilitado automáticamente
+
+### **📝 Para Hacer Cambios**
+
+Cualquier modificación al repositorio se desplegará automáticamente:
+
+```bash
+# Hacer cambios locales
+git add .
+git commit -m "Update: descripción del cambio"
+git push origin main
+
+# GitHub Pages se actualiza automáticamente en 1-2 minutos
+```
+
+### **🌍 Configurar Dominio Personalizado (Opcional)**
+
+Si quieres usar un dominio propio como `carlosjhirashi.com`:
+
+1. **Compra un dominio**
+2. **Configura DNS** apuntando a GitHub:
+   ```
+   A Records:
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+3. **En GitHub**: Settings → Pages → Custom domain → Agregar tu dominio
+4. **GitHub generará automáticamente** el certificado SSL
+
+### **📊 Monitoreo**
+
+- **Último deploy**: Se puede ver en la pestaña "Actions" del repositorio
+- **Status**: GitHub muestra si el deployment fue exitoso
+- **Logs**: Disponibles en caso de errores
+
+### **🚀 Alternativas de Deployment**
+
+Si en el futuro quieres cambiar de plataforma:
+
+#### **Netlify** (Más features)
+1. Conectar repositorio GitHub
+2. Auto-deploy configurado
+3. Formularios y funciones serverless disponibles
+
+#### **Vercel** (Optimizado para performance)
+1. Import desde GitHub
+2. Edge functions disponibles
+3. Analytics integrado
 
 ## 📱 Responsive Design
 
