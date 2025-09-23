@@ -1,136 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Página principal del portafolio personal -->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portafolio | Carlos Jiménez</title>
-  <meta name="description" content="Portafolio profesional de Carlos Jiménez Hirashi — Científico de Datos Jr., Python, SQL, Machine Learning y Automatización HVAC." />
-  <meta name="theme-color" content="#06b6d4" />
-
-  <!-- Fuente moderna y legible -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet separado -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Jiménez Hirashi - Data Scientist</title>
+    <meta name="description" content="Científico de Datos Jr. especializado en Machine Learning y automatización HVAC">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <!-- Barra superior con logotipo, enlaces de navegación y selector de tema -->
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <div class="brand-logo" aria-hidden="true"></div>
-        <h1>Carlos Jiménez - Portafolio</h1>
-      </a>
-      <nav>
-        <!-- Botón hamburguesa mostrado en móviles -->
-        <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('show')">☰</button>
-        <!-- Menú principal de navegación -->
-        <div class="menu" role="menu">
-          <a href="#sobre-mi">Sobre mí</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#experiencia">Experiencia</a>
-          <a href="#educacion">Educación</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-        <!-- Selector de modo de color -->
-        <select id="theme-select" aria-label="Cambiar tema">
-          <option value="system">Sistema</option>
-          <option value="light">Claro</option>
-          <option value="dark">Oscuro</option>
-        </select>
-      </nav>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
     </div>
-  </header>
 
-  <main id="top" class="container">
-    <!-- HERO: presentación principal con datos destacados -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid">
-        <div>
-          <span class="kicker">Data Science · Python · SQL</span>
-          <h2 id="hero-title" class="title">Científico de Datos Jr. en formación, con base sólida en programación y automatización HVAC.</h2>
-          <p class="subtitle">Transformo datos en decisiones y modelos predictivos. Experiencia en integración de sistemas (BACnet, Modbus, LonWorks) y análisis con Python, pandas, scikit-learn y visualización. Busco aportar a equipos con enfoque en impacto medible.</p>
-          <div class="cta">
-            <a class="btn" href="https://github.com/cjhirashi" target="_blank" rel="noopener" aria-label="Ver mi GitHub">💻 Ver GitHub</a>
-            <a class="btn alt" href="https://www.linkedin.com/in/cjhirashi" target="_blank" rel="noopener" aria-label="Ver mi LinkedIn">💼 LinkedIn</a>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="Datos rápidos">
-          <div class="row">
-            <div class="stat"><b>+10</b><span class="small">años en automatización HVAC</span></div>
-            <div class="stat"><b>TripleTen</b><span class="small">Bootcamp de Ciencia de Datos (2025)</span></div>
-            <div class="stat"><b>Python · SQL</b><span class="small">pandas, NumPy, scikit-learn</span></div>
-            <div class="stat"><b>CDMX</b><span class="small">México · Remoto</span></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SOBRE MI: descripción personal y datos de contacto -->
-    <section id="sobre-mi" aria-labelledby="about-title">
-      <h2 class="section-title">👤 Sobre mí</h2>
-      <div class="section-grid">
-        <article class="about">
-          <p>Científico de Datos Jr. en formación a través de TripleTen, con dominio de Python, SQL, estadística, análisis de datos y machine learning. Mi trayectoria en programación e integración de sistemas HVAC me permite abordar problemas complejos con un enfoque analítico y orientado a resultados.</p>
-          <p>Me apasiona encontrar patrones, construir modelos de clasificación y regresión, y traducir los hallazgos en acciones concretas para el negocio. Actualmente desarrollo proyectos de limpieza, exploración y modelado de datos, así como asistentes GPT para documentación técnica.</p>
-        </article>
-        <aside class="meta">
-          <div class="meta-card">
-            <ul class="list">
-              <li><span>Ubicación</span><b>Ciudad de México, México</b></li>
-              <li><span>Correo</span><a href="mailto:cjhirashi@gmail.com">cjhirashi@gmail.com</a></li>
-              <li><span>Teléfono</span><b>+52 55 1371 0160</b></li>
-              <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/cjhirashi">cjhirashi</a></li>
+    <!-- Header -->
+    <header class="header" id="header" style="display: none;">
+        <nav class="nav container">
+            <a href="#" class="logo">CJH</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#tech">Tecnologías</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-          </div>
-          <div class="meta-card">
-            <div class="small">Disponibilidad</div>
-            <div><b>Remoto / Híbrido · México y LATAM</b></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-    <!-- HABILIDADES -->
-    <section id="habilidades" aria-labelledby="skills-title">
-      <!-- Contenido cargado dinámicamente desde habilidades.json -->
-    </section>
+            <div class="theme-toggle">
+                <button class="theme-btn" data-theme="light" title="Tema claro">
+                    <span data-icon="sun"></span>
+                </button>
+                <button class="theme-btn" data-theme="dark" title="Tema oscuro">
+                    <span data-icon="moon"></span>
+                </button>
+                <button class="theme-btn" data-theme="system" title="Tema del sistema">
+                    <span data-icon="monitor"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" aria-labelledby="projects-title">
-      <!-- Contenido cargado dinámicamente desde proyectos.json -->
-    </section>
+    <!-- Main Content -->
+    <main id="main-content" style="display: none;">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 id="hero-name"></h1>
+                <p class="hero-subtitle" id="hero-subtitle"></p>
+                <div class="hero-badges" id="hero-badges"></div>
+            </div>
+        </section>
 
-    <!-- EXPERIENCIA -->
-    <section id="experiencia" aria-labelledby="exp-title">
-      <!-- Contenido cargado dinámicamente desde experiencia.json -->
-    </section>
-    <!-- EDUCACION -->
-    <section id="educacion" aria-labelledby="edu-title">
-      <!-- Contenido cargado dinámicamente desde educacion.json -->
-    </section>
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <div class="about-text" id="about-text"></div>
+                    <div class="about-stats" id="about-stats"></div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" aria-labelledby="contact-title">
-      <h2 class="section-title">✉️ Contacto</h2>
-      <div class="meta-card">
-        <p class="muted">¿Tienes una oportunidad o proyecto? Escríbeme y con gusto conversamos.</p>
-        <div class="grid-2">
-          <a class="btn" href="mailto:cjhirashi@gmail.com">📬 Email</a>
-          <a class="btn alt" href="https://www.linkedin.com/in/cjhirashi" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <!-- Tech Stack Section -->
+        <section class="section" id="tech">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="tech-grid" id="tech-grid"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="projects-grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-grid" id="contact-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer" style="display: none;">
+        <div class="container">
+            <p class="footer-text" id="footer-text"></p>
         </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>© <span id="year"></span> Carlos Jiménez Hirashi · Hecho con HTML + CSS · Responsive</p>
     </footer>
-  </main>
-  <!-- Script principal: utilidades y carga de datos -->
-  <script src="main.js"></script>
 
-
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>

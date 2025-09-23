@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Email",
+        "info": "cjhirashi@gmail.com",
+        "icon": "mail",
+        "link": "mailto:cjhirashi@gmail.com"
+    },
+    {
+        "title": "LinkedIn",
+        "info": "cjhirashi",
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/cjhirashi"
+    },
+    {
+        "title": "GitHub",
+        "info": "cjhirashi",
+        "icon": "github",
+        "link": "https://github.com/cjhirashi"
+    },
+    {
+        "title": "Ubicación",
+        "info": "Ciudad de México, México",
+        "icon": "map-pin",
+        "link": null
+    }
+]

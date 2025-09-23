@@ -1,0 +1,114 @@
+[
+    {
+        "category": "Lenguajes",
+        "items": [
+            {
+                "name": "Python",
+                "icon": "code"
+            },
+            {
+                "name": "SQL",
+                "icon": "database"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "code"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "code-2"
+            },
+            {
+                "name": "HTML5",
+                "icon": "layout"
+            },
+            {
+                "name": "CSS3",
+                "icon": "palette"
+            }
+        ]
+    },
+    {
+        "category": "Librerías / ML",
+        "items": [
+            {
+                "name": "Pandas",
+                "icon": "bar-chart"
+            },
+            {
+                "name": "NumPy",
+                "icon": "calculator"
+            },
+            {
+                "name": "Matplotlib",
+                "icon": "pie-chart"
+            },
+            {
+                "name": "Seaborn",
+                "icon": "trending-up"
+            },
+            {
+                "name": "Scikit-learn",
+                "icon": "brain"
+            },
+            {
+                "name": "Plotly",
+                "icon": "line-chart"
+            }
+        ]
+    },
+    {
+        "category": "Datos y Herramientas",
+        "items": [
+            {
+                "name": "PostgreSQL",
+                "icon": "database"
+            },
+            {
+                "name": "MySQL",
+                "icon": "database"
+            },
+            {
+                "name": "Git",
+                "icon": "git-branch"
+            },
+            {
+                "name": "GitHub",
+                "icon": "github"
+            },
+            {
+                "name": "VS Code",
+                "icon": "code"
+            },
+            {
+                "name": "Jupyter",
+                "icon": "book-open"
+            }
+        ]
+    },
+    {
+        "category": "Automatización HVAC",
+        "items": [
+            {
+                "name": "BACnet",
+                "icon": "wifi"
+            },
+            {
+                "name": "Modbus",
+                "icon": "network"
+            },
+            {
+                "name": "LonWorks",
+                "icon": "radio"
+            },
+            {
+                "name": "Control Basic",
+                "icon": "settings"
+            },
+            {
+                "name": "AutoCAD",
+                "icon": "edit"
+            }
+        ]
+    }
+]

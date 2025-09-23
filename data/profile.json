@@ -1,0 +1,20 @@
+{
+    "name": "Carlos Jiménez Hirashi",
+    "title": "Científico de Datos Jr.",
+    "subtitle": "Transformo datos en soluciones prácticas y optimizadas, combinando experiencia técnica con Ciencia de Datos.",
+    "location": "Ciudad de México, México",
+    "badges": [
+        {
+            "text": "Data Scientist",
+            "icon": "database"
+        },
+        {
+            "text": "HVAC Expert",
+            "icon": "settings"
+        },
+        {
+            "text": "15+ años exp.",
+            "icon": "award"
+        }
+    ]
+}

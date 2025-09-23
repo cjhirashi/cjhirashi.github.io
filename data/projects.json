@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Predicción de Churn en Beta Bank",
+        "description": "Desarrollo de un modelo de Machine Learning para predecir la salida de clientes (churn) en Beta Bank. El objetivo fue optimizar la métrica F1 ≥ 0.59, comparando resultados con la métrica AUC-ROC y aplicando técnicas de balanceo de clases.",
+        "technologies": ["Python", "Pandas", "Scikit-Learn", "Jupyter"],
+        "github": "https://github.com/cjhirashi/proyecto-sprint-10",
+        "demo": null,
+        "features": [
+            "Preparación y limpieza de datos bancarios",
+            "Técnicas de balanceo para datos desbalanceados",
+            "Modelos de clasificación optimizados para métrica F1",
+            "Evaluación con AUC-ROC y validación de consistencia"
+        ]
+    },
+    {
+        "title": "Clasificación de Planes Megaline",
+        "description": "Desarrollo de un modelo de Machine Learning para clasificar clientes de Megaline y recomendar el plan óptimo (Smart o Ultra), alcanzando una exactitud mínima de 0.75.",
+        "technologies": ["Python", "Pandas", "Scikit-Learn", "Jupyter"],
+        "github": "https://github.com/cjhirashi/proyecto-sprint-9",
+        "demo": null,
+        "features": [
+            "Análisis de comportamiento de usuarios",
+            "Entrenamiento de modelos de clasificación",
+            "Ajuste de hiperparámetros",
+            "Prueba de cordura para verificar consistencia"
+        ]
+    },
+    {
+        "title": "Dashboard Streamlit: Anuncios de Vehículos",
+        "description": "Aplicación web interactiva en Streamlit para analizar datos de anuncios de autos usados en Estados Unidos. Permite explorar la relación entre el kilometraje y el precio de los vehículos.",
+        "technologies": ["Python", "Streamlit", "Plotly", "Jupyter"],
+        "github": "https://github.com/cjhirashi/dashboard-sprint-7",
+        "demo": "https://dashboard-sprint-7.streamlit.app",
+        "features": [
+            "Histograma dinámico de kilometraje",
+            "Gráfico de dispersión interactivo",
+            "Interfaz amigable con Streamlit",
+            "Visualizaciones en Plotly"
+        ]
+    },
+    {
+        "title": "Análisis de Ventas de Videojuegos",
+        "description": "Análisis de datos de ventas de videojuegos a nivel global para identificar patrones de éxito y probar hipótesis estadísticas para apoyar decisiones estratégicas en campañas de marketing.",
+        "technologies": ["Python", "Pandas", "Matplotlib", "Jupyter"],
+        "github": "https://github.com/cjhirashi/proyecto-sprint-6",
+        "demo": null,
+        "features": [
+            "Identificación de plataformas y géneros exitosos",
+            "Análisis de relación entre reseñas y ventas",
+            "Perfiles de usuario por regiones",
+            "Pruebas de hipótesis estadísticas"
+        ]
+    },
+    {
+        "title": "Análisis de Tarifas Megaline",
+        "description": "Análisis de datos de clientes del operador Megaline para determinar qué tarifa de prepago (Surf o Ultimate) genera mayores ingresos y optimizar la estrategia de marketing.",
+        "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "SciPy"],
+        "github": "https://github.com/cjhirashi/proyecto-sprint-5",
+        "demo": null,
+        "features": [
+            "Análisis de comportamiento de clientes",
+            "Cálculo de ingresos mensuales por usuario",
+            "Visualización de patrones de uso",
+            "Pruebas de hipótesis estadísticas"
+        ]
+    }
+]
